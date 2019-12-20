@@ -2,14 +2,13 @@ import XCTest
 @testable import DateFormatterBucket
 
 final class DateFormatterBucketTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(DateFormatterBucket().text, "Hello, World!")
-    }
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
+  
+  func test_returnsPreviousFormatter_forSameFormat() {
+    
+    let dateFormatter = DateFormatterBucket.shared["yyyy-MM-dd"]
+    let newDateFormatter = DateFormatterBucket.shared["yyyy-MM-dd"]
+    
+    XCTAssertEqual(dateFormatter, newDateFormatter)
+    XCTAssertEqual(1, DateFormatterBucket.shared.dateFormatters.count)
+  }
 }
