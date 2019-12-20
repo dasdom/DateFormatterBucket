@@ -24,6 +24,10 @@ let newDateFormatter = DateFormatterBucket.shared["yyyy-dd-MM"]
 
 These two date formatters are the instance. When calling `DateFormatterBucket.shared["yyyy-dd-MM"]` a date formatter is generated if it is not already there. Otherwise the existing date formatter is returned.
 
+## Installation
+
+Add as Swift Package in Xcode.
+
 ## Who?
 
 Dominik Hauser
