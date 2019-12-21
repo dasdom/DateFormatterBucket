@@ -22,13 +22,13 @@ let dateFormatter = DateFormatterBucket.shared["yyyy-dd-MM"]
 let newDateFormatter = DateFormatterBucket.shared["yyyy-dd-MM"]
 ```
 
+These two date formatters are the instance. When calling `DateFormatterBucket.shared["yyyy-dd-MM"]` a date formatter is generated if it is not already there. Otherwise the existing date formatter is returned.
+
 You can also create a date formatter with a specific date and time style like this:
 
 ```swift
 let dateFormatter = DateFormatterBucket.shared.formatter(dateStyle: .long, timeStyle: .short)
 ```
-
-These two date formatters are the instance. When calling `DateFormatterBucket.shared["yyyy-dd-MM"]` a date formatter is generated if it is not already there. Otherwise the existing date formatter is returned.
 
 ## Installation
 
