@@ -29,4 +29,12 @@ final class DateFormatterBucketTests: XCTestCase {
     XCTAssertEqual(dateFormatter.dateStyle, .long)
     XCTAssertEqual(dateFormatter.timeStyle, .short)
   }
+  
+  func test_formatterWithLocale_setsLocale() {
+    let locale = Locale(identifier: "br_FR")
+    
+    let formatter = DateFormatterBucket.shared.formatter(format: "yyyy-MM-dd HH:ss", locale: locale)
+    
+    XCTAssertEqual(locale, formatter.locale)
+  }
 }
