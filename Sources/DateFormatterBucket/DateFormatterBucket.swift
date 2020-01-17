@@ -33,7 +33,7 @@ public class DateFormatterBucket {
     }
   }
   
-  public formatter(format: String, locale: Locale) -> DateFormatter {
+  public func formatter(format: String, locale: Locale) -> DateFormatter {
     let key = "\(format),\(locale.description)"
     if let formatter = dateFormatters[key] {
       return formatter
