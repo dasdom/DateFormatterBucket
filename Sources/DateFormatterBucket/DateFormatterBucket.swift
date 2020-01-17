@@ -32,4 +32,17 @@ public class DateFormatterBucket {
       }
     }
   }
+  
+  public formatter(format: String, locale: Locale) -> DateFormatter {
+    let key = "\(format),\(locale.description)"
+    if let formatter = dateFormatters[key] {
+      return formatter
+    } else {
+      let formatter = DateFormatter()
+      formatter.dateFormat = format
+      formatter.locale = locale
+      dateFormatters[key] = formatter
+      return formatter
+    }
+  }
 }
